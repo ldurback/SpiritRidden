@@ -1,0 +1,213 @@
+// AUTOMATICALLY GENERATED CODE
+
+using System;
+using System.Collections.Generic;
+using Sce.PlayStation.Core;
+using Sce.PlayStation.Core.Imaging;
+using Sce.PlayStation.Core.Environment;
+using Sce.PlayStation.HighLevel.UI;
+
+namespace Preview
+{
+    partial class StartScreen
+    {
+        ImageBox ImageBox_1;
+        Button Button_1;
+        Button Button_2;
+        Button Button_3;
+        Button Button_4;
+        Label Label_1;
+
+        private void InitializeWidget()
+        {
+            InitializeWidget(LayoutOrientation.Horizontal);
+        }
+
+        private void InitializeWidget(LayoutOrientation orientation)
+        {
+            ImageBox_1 = new ImageBox();
+            ImageBox_1.Name = "ImageBox_1";
+            Button_1 = new Button();
+            Button_1.Name = "Button_1";
+            Button_2 = new Button();
+            Button_2.Name = "Button_2";
+            Button_3 = new Button();
+            Button_3.Name = "Button_3";
+            Button_4 = new Button();
+            Button_4.Name = "Button_4";
+            Label_1 = new Label();
+            Label_1.Name = "Label_1";
+
+            // StartScreen
+            this.RootWidget.AddChildLast(ImageBox_1);
+            this.RootWidget.AddChildLast(Button_1);
+            this.RootWidget.AddChildLast(Button_2);
+            this.RootWidget.AddChildLast(Button_3);
+            this.RootWidget.AddChildLast(Button_4);
+            this.RootWidget.AddChildLast(Label_1);
+
+            // ImageBox_1
+            ImageBox_1.Image = new ImageAsset("/Application/assets/picture/GameStart.png");
+            ImageBox_1.ImageScaleType = ImageScaleType.Center;
+
+            // Button_1
+            Button_1.IconImage = new ImageAsset("/Application/assets/picture/GoodButton.png");
+
+            // Button_2
+            Button_2.IconImage = new ImageAsset("/Application/assets/picture/EvilButton.png");
+
+            // Button_3
+            Button_3.TextColor = new UIColor(0f / 255f, 0f / 255f, 0f / 255f, 255f / 255f);
+            Button_3.TextFont = new UIFont(FontAlias.System, 25, FontStyle.Regular);
+
+            // Button_4
+            Button_4.TextColor = new UIColor(0f / 255f, 0f / 255f, 0f / 255f, 255f / 255f);
+            Button_4.TextFont = new UIFont(FontAlias.System, 25, FontStyle.Regular);
+
+            // Label_1
+            Label_1.TextColor = new UIColor(0f / 255f, 0f / 255f, 0f / 255f, 255f / 255f);
+            Label_1.Font = new UIFont(FontAlias.System, 25, FontStyle.Regular);
+            Label_1.LineBreak = LineBreak.Character;
+
+            SetWidgetLayout(orientation);
+
+            UpdateLanguage();
+        }
+		
+		void HandleButton_1ButtonAction (object sender, TouchEventArgs e)
+        {
+			UISystem.SetScene(new LoadingScreen());
+        }
+		
+		void HandleButton_2ButtonAction (object sender, TouchEventArgs e)
+        {
+        	
+			UISystem.SetScene(new LoadingScreen());
+        }
+		
+		void HandleButton_3ButtonAction (object sender, TouchEventArgs e)
+        {
+        	
+        }
+		
+		void HandleButton_4ButtonAction (object sender, TouchEventArgs e)
+        {
+        	UISystem.SetScene(new Options());
+        }
+		
+		
+        private LayoutOrientation _currentLayoutOrientation;
+        public void SetWidgetLayout(LayoutOrientation orientation)
+        {
+            switch (orientation)
+            {
+                case LayoutOrientation.Vertical:
+                    this.DesignWidth = 544;
+                    this.DesignHeight = 960;
+
+                    ImageBox_1.SetPosition(0, 0);
+                    ImageBox_1.SetSize(200, 200);
+                    ImageBox_1.Anchors = Anchors.None;
+                    ImageBox_1.Visible = true;
+
+                    Button_1.SetPosition(153, 73);
+                    Button_1.SetSize(214, 56);
+                    Button_1.Anchors = Anchors.None;
+                    Button_1.Visible = true;
+
+                    Button_2.SetPosition(478, 116);
+                    Button_2.SetSize(214, 56);
+                    Button_2.Anchors = Anchors.None;
+                    Button_2.Visible = true;
+
+                    Button_3.SetPosition(90, 487);
+                    Button_3.SetSize(214, 56);
+                    Button_3.Anchors = Anchors.None;
+                    Button_3.Visible = true;
+
+                    Button_4.SetPosition(506, 487);
+                    Button_4.SetSize(214, 56);
+                    Button_4.Anchors = Anchors.None;
+                    Button_4.Visible = true;
+
+                    Label_1.SetPosition(87, 11);
+                    Label_1.SetSize(214, 36);
+                    Label_1.Anchors = Anchors.None;
+                    Label_1.Visible = true;
+
+                    break;
+
+                default:
+                    this.DesignWidth = 960;
+                    this.DesignHeight = 544;
+
+                    ImageBox_1.SetPosition(0, 0);
+                    ImageBox_1.SetSize(959, 543);
+                    ImageBox_1.Anchors = Anchors.None;
+                    ImageBox_1.Visible = true;
+
+                    Button_1.SetPosition(224, 75);
+                    Button_1.SetSize(260, 333);
+                    Button_1.Anchors = Anchors.None;
+                    Button_1.Visible = true;
+
+                    Button_2.SetPosition(484, 72);
+                    Button_2.SetSize(256, 336);
+                    Button_2.Anchors = Anchors.None;
+                    Button_2.Visible = true;
+
+                    Button_3.SetPosition(153, 487);
+                    Button_3.SetSize(214, 56);
+                    Button_3.Anchors = Anchors.None;
+                    Button_3.Visible = true;
+
+                    Button_4.SetPosition(581, 488);
+                    Button_4.SetSize(214, 56);
+                    Button_4.Anchors = Anchors.None;
+                    Button_4.Visible = true;
+
+                    Label_1.SetPosition(153, 0);
+                    Label_1.SetSize(682, 39);
+                    Label_1.Anchors = Anchors.None;
+                    Label_1.Visible = true;
+
+                    break;
+            }
+            _currentLayoutOrientation = orientation;
+        }
+
+        public void UpdateLanguage()
+        {
+            Button_3.Text = "Load Game";
+
+            Button_4.Text = "Option Menu";
+
+            Label_1.Text = "Choose the Angel or Devil, Choose to be good or evil. ";
+        }
+
+        private void onShowing(object sender, EventArgs e)
+        {
+            switch (_currentLayoutOrientation)
+            {
+                case LayoutOrientation.Vertical:
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        private void onShown(object sender, EventArgs e)
+        {
+            switch (_currentLayoutOrientation)
+            {
+                case LayoutOrientation.Vertical:
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+    }
+}
