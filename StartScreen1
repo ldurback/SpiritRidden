@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using Sce.PlayStation.Core;
+using Sce.PlayStation.Core.Imaging;
+using Sce.PlayStation.Core.Environment;
+using Sce.PlayStation.HighLevel.UI;
+
+namespace Preview
+{
+    public partial class StartScreen : Scene
+    {
+        public StartScreen()
+        {
+            InitializeWidget(LayoutOrientation.Horizontal);
+			Button_1.ButtonAction += HandleButton_1ButtonAction;
+			Button_2.ButtonAction += HandleButton_2ButtonAction;
+			Button_3.ButtonAction += HandleButton_3ButtonAction;
+			Button_4.ButtonAction += HandleButton_4ButtonAction;
+        }
+    }
+}
